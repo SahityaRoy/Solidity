@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: UNLICENSED
+
+
+
+pragma solidity ^0.8.0;
+contract Calculator {
+    function addition(uint numberOne, uint numberTwo) public pure returns (uint) {
+        return numberOne + numberTwo;
+    }
+    function subtraction(uint numberOne, uint numberTwo) public pure returns (uint) {
+        return numberOne - numberTwo;
+    }
+    function multiplication(uint numberOne, uint numberTwo) public pure returns (uint) {
+        return numberOne * numberTwo;
+    }
+    function division(uint numberOne, uint numberTwo) public pure returns (uint) {
+        require(numberTwo > 0, "The second parameter should be greater than 0");
+        return numberOne / numberTwo;
+    }
+}
